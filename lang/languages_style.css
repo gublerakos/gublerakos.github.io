@@ -1,0 +1,214 @@
+/* ##################################################################### */
+/* #                            DESKTOP                                # */
+/* ##################################################################### */
+
+.title {
+    display: none;
+}
+
+.menu .languages h1{
+    color: white;
+}
+
+.content {
+    display: grid;
+    margin: 40px auto;
+    width: 90%;
+    height: fit-content + 200px;
+    background-color: white;    
+    padding: 5px;
+	justify-self: center;
+    grid-template-rows: auto ;
+    /* 75px 20px 75px 20px 75px 20px 75px 20px 75px 20px 75px 20px 75px 20px 75px 20px auto; */
+    grid-template-columns: 30px auto 30px;
+    grid-template-areas: 
+    ". . ."
+    ". english ."
+    ". eng_text ."
+    ". french ."
+    ". fre_text ."
+    ". german ."
+    ". ger_text ."
+    ". spanish ."
+    ". spa_text ."
+    ". italian ."
+    ". ita_text ."
+    ". turkish ."
+    ". tur_text ."
+    ". russian ."
+    ". rus_text ."
+    ". chinese ."
+    ". chi_text .";
+}
+
+.english{
+    font-size: 25px;
+    grid-area: english;
+    background-color: rgb(252,143,68);
+    cursor: pointer;
+}
+.eng_text {
+    width: 70%;
+    justify-self: center;
+    grid-area: eng_text;
+}
+
+.french{
+    font-size: 25px;
+    grid-area: french;
+    background-color: rgb(252,143,68);
+    cursor: pointer;
+}
+.fre_text {
+    width: 70%;
+    justify-self: center;
+    grid-area: fre_text;
+}
+
+.german{
+    font-size: 25px;
+    grid-area: german;
+    background-color: rgb(252,143,68);
+    cursor: pointer;
+}
+.ger_text {
+    width: 70%;
+    justify-self: center;
+    grid-area: ger_text;
+}
+
+.spanish{
+    font-size: 25px;
+    grid-area: spanish;
+    background-color: rgb(252,143,68);
+    cursor: pointer;
+}
+.spa_text {
+    width: 70%;
+    justify-self: center;
+    grid-area: spa_text;
+}
+
+.italian{
+    font-size: 25px;
+    grid-area: italian;
+    background-color: rgb(252,143,68);
+    cursor: pointer;
+}
+.ita_text{
+    width: 70%;
+    justify-self: center;
+    grid-area: ita_text;
+}
+
+.turkish{
+    font-size: 25px;
+    grid-area: turkish;
+    background-color: rgb(252,143,68);
+    cursor: pointer;
+}
+.tur_text {
+    width: 70%;
+    justify-self: center;
+    grid-area: tur_text;
+}
+
+.russian{
+    font-size: 25px;
+    grid-area: russian;
+    background-color: rgb(252,143,68);
+    cursor: pointer;
+}
+.russ_text {
+    width: 70%;
+    justify-self: center;
+    grid-area: rus_text;
+}
+
+.chinese{
+    font-size: 25px;
+    grid-area: chinese;
+    background-color: rgb(252,143,68);
+    cursor: pointer;
+}
+.chi_text {
+    width: 70%;
+    justify-self: center;
+    grid-area: chi_text;
+}
+
+.english h2, .french h2, .german h2, .spanish h2, .italian h2, .turkish h2, .russian h2, .chinese h2{
+    padding: 25px;
+}
+
+.english, .french, .german, .spanish, .italian, .turkish, .russian, .chinese{
+    width: 70%;
+    justify-self: center;
+}
+
+.english #eng, .french #fre, .german #ger, .spanish #spa, .italian #ita, .turkish #tur, .russian #rus, .chinese #chi{
+
+    display: block;
+}
+
+
+.eng_text #eng, .fre_text #fre, .ger_text #ger, .spa_text #spa, .ita_text #ita, .tur_text #tur, .russ_text #rus, .chi_text #chi{
+    display: none;
+    position: relative;
+    background-color: rgba(252,143,68, 0.4);
+    justify-content: center;
+}
+
+.content h1{
+    text-align: center;
+	font-size: 45px;
+	padding: 10px;
+}
+
+#eng h1, #fre h1, #ger h1, #spa h1, #ita h1, #tur h1, #rus h1, #chi h1{
+    font-size: 25px;
+}
+#eng h2, #fre h2, #ger h2, #spa h2, #ita h2, #tur h2, #rus h2, #chi h2{
+    font-size: 20px;
+    
+}
+#eng p, #fre p, #ger p, #spa p, #ita p, #tur p, #rus p, #chi p{
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+/* ##################################################################### */
+/* #                            MOBILE                                 # */
+/* ##################################################################### */
+@media screen and (max-width: 824px){
+    .title {
+        display: block;
+    }
+    .topnav #home {
+        color: #166287;
+    }
+    .topnav #languages {
+        color: white;
+    }
+    .content h1{
+        font-size: 30px;
+    }
+    .content{
+        grid-template-columns: 10px auto 10px;
+        /* grid-template-rows: auto 60px 10px 60px 10px 60px 10px 60px 10px 60px 10px 60px 10px 60px 10px 60px; */
+        grid-template-rows: auto;
+    }
+    .english, .french, .german, .spanish, .italian, .turkish, .russian, .chinese{
+        width: 90%;
+        font-size: 18cpx;
+    }
+
+    #eng h1, #fre h1, #ger h1, #spa h1, #ita h1, #tur h1, #rus h1, #chi h1{
+        font-size: 20px;
+    }
+    #eng p, #fre p, #ger p, #spa p, #ita p, #tur p, #rus p, #chi p{
+        font-size: 18px;
+    }
+
+}
