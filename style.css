@@ -98,6 +98,10 @@ body {
     width: 100%;
 }
 
+.front_boxes a{
+    text-decoration: none;
+}
+
 .kids {
     grid-area: kids;
     background-color: #fc8f44;
@@ -172,14 +176,75 @@ body {
     height: 102%;
 }
 
-footer {
+/* footer {
 	display: block;
 	text-align: center;
 	background-color: rgb(0, 0, 0);
 	position: absolute;
 	bottom: 0;
 	height: 130px;
+  width: 100%;
+} */
+.info {
+    display: grid;
+    position: relative;
+    justify-self: center;
+    bottom: 0;
+    /* SOS */
+    /* margin-top: 100%; */
     width: 100%;
+    height: 200px;
+    background-color: #000;
+    grid-auto-rows: 200px;
+    grid-template-columns: auto;
+    grid-template-areas:
+    ". programms . information .";
+}
+.programms {
+    grid-area: programms;
+    margin-top: 10px;
+    margin-left: 15%;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-self: center;
+}
+.programms p{
+    padding: 5px;
+}
+.programms a{
+    color: white;
+}
+
+.information {
+    grid-area: information;
+    margin-top: 10px;
+    margin-left: 15%;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-self: center;
+}
+
+.information p{
+    padding: 5px;
+}
+
+.loc{
+    width: 30px;
+    height: 30px;
+}
+
+.ph{
+    width: 30px;
+    height: 30px;
+}
+
+.em{
+    width: 30px;
+    height: 30px;
 }
 
 /* ##################################################################### */
@@ -237,6 +302,24 @@ footer {
     .kids h1, .students h1, .adults h1{
         margin-top: 30px;
         font-size: 20px;
+    }
+
+    .info{
+        grid-template-columns: 10px auto 10px;
+        grid-template-areas:
+        ". information .";
+    }
+    .programms{
+        display: none;
+    }
+    .information{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .loc, .ph, .em{
+        width: 20px;
+        height: 20px;
     }
 
 }
