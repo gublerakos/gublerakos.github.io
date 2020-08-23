@@ -1,3 +1,0 @@
-# gublerakos.github.io
-
-LICENCE
