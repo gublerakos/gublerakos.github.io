@@ -130,6 +130,7 @@ p {
         font-size: 22px;
     }
     .photo {
+        margin-left: 0;
         width: 380px;
     }
 }
