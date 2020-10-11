@@ -105,11 +105,11 @@ p {
         margin-left: 0;
         margin-top: 20px;
         height: fit-content;
-        width: 380px;
+        width: 370px;
         margin-bottom: 20px;
         display: grid;
         justify-content: center;
-        grid-template-columns: 380px;
+        grid-template-columns: 370px;
         grid-template-rows: auto 10px auto ;
     }
     .newHr {
@@ -131,7 +131,7 @@ p {
     }
     .photo {
         margin-left: 0;
-        width: 380px;
+        width: 370px;
     }
 }
 
