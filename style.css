@@ -129,6 +129,9 @@ p {
     .about {
         font-size: 22px;
     }
+    .photo {
+        width: 380px;
+    }
 }
 
 @media screen and (max-width: 320px){
