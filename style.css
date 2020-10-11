@@ -90,3 +90,72 @@ p {
 .newHr {
     width: 770px;
 }
+
+/* ##################################################################### */
+/* #                            MOBILE                                 # */
+/* ##################################################################### */
+
+@media screen and (max-width: 824px){
+
+    body{
+        display: grid;
+        justify-content: center;
+    }
+    .content {
+        margin-left: 0;
+        margin-top: 20px;
+        height: fit-content;
+        width: 380px;
+        margin-bottom: 20px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 380px;
+        grid-template-rows: auto 10px auto ;
+    }
+    .newHr {
+        width: 350px;
+    }
+    .headerText {
+        font-size: 17px;
+        margin-left: 0;
+    }
+    .insideText {
+        padding-left: 10px;
+        font-size: 15px;
+    }
+    h1, h2, p a {
+        font-size: 15px;
+    }
+    .about {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .content {
+        width: 320px;
+        grid-template-columns: 320px;
+    }
+
+    hr, .newHr {
+        margin-left: 0;
+        width: 320px;
+    }
+    .photo {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 280px){
+    .content {
+        width: 280px;
+        grid-template-columns: 280px;
+    }
+
+    hr, .newHr {
+        margin-left: 0;
+        width: 280px;
+    }
+    .photo {
+        width: 260px;
+    }
+}
