@@ -92,7 +92,7 @@ body{
     opacity: 1;
 }
 .trendingNow:hover .text{
-    font-size: 70px;
+    font-size: 65px;
 }
 .trendingNow:hover .text2{
     font-size: 32px;
