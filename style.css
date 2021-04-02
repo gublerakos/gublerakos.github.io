@@ -1,260 +1,165 @@
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+html,body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto", sans-serif
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
-body {
-    background-color: #EDEDED;
+h1, h2, h3, h4, p {
+    color: #454040;
 }
 
-.textUp {
-    font-size: 17px;
-    text-align: center;
-    background-color: #C692C8;
-    padding: 20px;
-    font-weight: 100;
+hr {
+    width: 350px;
+    margin-left: 15px;
 }
 
-.header {
-    margin-top: 40px;
-    height: 150px;
-    font-family: Georgia, serif;
-    color: black;
-    font-variant: small-caps;
-    text-transform: none;
-    font-weight: 100;
-    text-align: center;
-    font-size: 80px;
-}
-
-.header h2 {
-    font-size: 25px;
-    margin-left: 850px;
-    font-variant: normal;
-    font-weight: normal;
-}
-
-.logo {
-    width: 90px;
+body{
+    background-color: #FFDFE9;
 }
 
 .content {
-    background-color: white;
-    width: 1400px;
-    height: 1400px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
+    width: 1200px;
+    height: fit-content;
+    margin-bottom: 100px;
     display: grid;
-    grid-template-columns: 390px 10px 1000px;
-    grid-template-rows: 600px 10px auto;
+    grid-template-columns: 380px 20px 800px;
+    grid-template-rows: 250px 20px auto;
 }
 
-.sideMenu {
+.item1, .item2 {
     grid-row-start: 1;
     grid-row-end: 4;
 }
 
-.sideMenu a {
-    height: 35px;
-    margin-top: 15px;
-    font-size: 30px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    display: block;
-    padding: 8px 8px 8px 32px;
+.item2, .item4{
+    background-color: #FFDFE9;
 }
 
-.sideMenu a:hover {
-    font-size: 32px;
+.photo {
+    width: 360px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
-.empty {
-    background-color: #EDEDED;
-    grid-row-start: 1;
-    grid-row-end: 4;
+.ml3 {
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 6%;
+    padding-left: 10px;
 }
 
-.trendingNow {
-    position: relative;
+h2 {
+    font-weight: 500;
+    font-size: 17px;
+    padding-top: 15px;
+    padding-left: 10px;
+    text-align: left;
 }
 
-.trending {
-    display: block;
-    width: 980px;
-    height: 580px;
-    margin: 10px auto 10px;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    color: white;
-}
-
-.trendingNow:hover .overlay {
-    opacity: 1;
-}
-
-.trendingNow:hover .text {
-    font-size: 60px;
-}
-
-.trendingNow:hover .text2 {
-    font-size: 32px;
-}
-
-.trendingNow:hover .trending {
-    opacity: 0.8;
-}
-
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    transition: .2s ease-out;
-    text-decoration: none;
-}
-
-.text2 {
-    font-size: 30px;
-}
-
-.mainMenu {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    padding: 10px;
-}
-
-.concerts {
-    margin-top: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-self: center;
-}
-
-
-/* CODE FOR HOVER EFE IN FRONT PAGE  */
-
-.container1 {
-    margin: 10px 10px;
-    position: relative;
-    width: fit-content;
-    margin-bottom: 20px;
-}
-
-.image1 {
-    display: block;
-    width: 300px;
-    height: 300px;
-}
-
-.overlay1 {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    background-color: #F8EDEF;
-    overflow: hidden;
-    width: 300px;
-    height: 0;
-    transition: .5s ease;
-}
-
-.container1:hover .overlay1 {
-    bottom: 0;
-    height: 100%;
-}
-
-.text1 {
-    color: black;
+.skills {
+    font-weight: bolder;
     font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
 }
 
-.contact {
-    background-color: white;
-    margin-top: 50px;
-    height: 500px;
-    width: 1400px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
+.about {
+    font-weight: bolder;
+    font-size: 25px;
 }
 
-.contact h1 {
-    padding: 10px;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 100;
+p {
+    padding: 3px;
 }
 
-
-/* CODE FOR EFE ENDS HERE */
-
-footer {
-    margin-top: 20px;
-    display: block;
-    /* text-align: center; */
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    height: 150px;
-    width: 100%;
+.headerText{
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 40px;
 }
 
-.flogo {
-    margin-top: 30px;
-    /* margin-left: 40px; */
-    text-align: center;
-}
-
-.footerText {
-    color: white;
-    /* text-align: left; */
+.insideText {
+    padding-top: 20px;
     padding-left: 70px;
-    font-size: 30px;
-    font-weight: 100;
-    background-image: url(cockatiel-silhouette-White.png);
-    display: none;
+    font-size: 17px;
+    text-decoration: none;
 }
 
-.footerLogo {
-    width: 50px;
-    color: white;
-    padding-left: 30px;
+.newHr {
+    width: 770px;
 }
 
-.copy p {
-    color: #eeeeee;
-    font-size: 15px;
-    text-align: center;
+/* ##################################################################### */
+/* #                            MOBILE                                 # */
+/* ##################################################################### */
+
+@media screen and (max-width: 824px){
+
+    body{
+        display: grid;
+        justify-content: center;
+    }
+    .content {
+        margin-left: 0;
+        margin-top: 20px;
+        height: fit-content;
+        width: 370px;
+        margin-bottom: 20px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 370px;
+        grid-template-rows: auto 10px auto ;
+    }
+    .newHr {
+        width: 350px;
+    }
+    .headerText {
+        font-size: 17px;
+        margin-left: 0;
+    }
+    .insideText {
+        padding-left: 10px;
+        font-size: 15px;
+    }
+    h1, h2, p a {
+        font-size: 15px;
+    }
+    .about {
+        font-size: 22px;
+    }
+    .photo {
+        margin-left: 0;
+        width: 370px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .content {
+        width: 320px;
+        grid-template-columns: 320px;
+    }
+
+    hr, .newHr {
+        margin-left: 0;
+        width: 320px;
+    }
+    .photo {
+        width: 320px;
+    }
+}
+@media screen and (max-width: 280px){
+    .content {
+        width: 280px;
+        grid-template-columns: 280px;
+    }
+
+    hr, .newHr {
+        margin-left: 0;
+        width: 280px;
+    }
+    .photo {
+        width: 280px;
+    }
 }
