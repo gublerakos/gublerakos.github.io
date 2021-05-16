@@ -1,165 +1,536 @@
-html,body,h1,h2,h3,h4,h5,h6 {
-    font-family: "Roboto", sans-serif
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    /* font-family: Arial, Helvetica, sans-serif; */
+/* ##################################################################### */
+
+
+/* #                            DESKTOP                                # */
+
+
+/* ##################################################################### */
+
+body {
+    /* display: grid; */
+    /* align-items: center; */
+    position: relative;
+    /* padding-bottom: 150px; */
+    min-height: 100vh;
+    /* grid-template-rows: auto; */
+    /* grid-template-columns: auto; */
+    background-color: #f1f1f1!important;
+    padding-bottom: 130px;
+    /* grid-template-rows: auto auto auto auto;
+	grid-template-areas:
+	"box1"
+	"box2"
+	"box3"
+	"box4"
+	"box5"; */
 }
 
-h1, h2, h3, h4, p {
-    color: #454040;
+footer {
+    display: block;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    /* padding-top: 20px; */
+    position: absolute;
+    bottom: 0;
+    height: 130px;
+    /* margin-top: -120px; */
+    width: 100%;
 }
 
-hr {
-    width: 350px;
-    margin-left: 15px;
+main {
+    /* position: relative; */
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px 20px;
 }
 
-body{
-    background-color: #FFDFE9;
+
+/* ############  Title  ############# */
+
+.title {
+    grid-area: box1;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    height: 220px;
+    background-color: #ffffff;
 }
 
-.content {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    width: 1200px;
-    height: fit-content;
-    margin-bottom: 100px;
+.titleLink {
     display: grid;
-    grid-template-columns: 380px 20px 800px;
-    grid-template-rows: 250px 20px auto;
+    grid-template-columns: auto auto 10px auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". titleLogo . titleText ." ". titleLogo . titleText .";
 }
 
-.item1, .item2 {
-    grid-row-start: 1;
-    grid-row-end: 4;
+.icon {
+    display: none;
 }
 
-.item2, .item4{
-    background-color: #FFDFE9;
-}
-
-.photo {
-    width: 360px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.ml3 {
-    font-weight: 600;
-    font-size: 22px;
-    margin-top: 6%;
-    padding-left: 10px;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: 17px;
-    padding-top: 15px;
-    padding-left: 10px;
-    text-align: left;
-}
-
-.skills {
-    font-weight: bolder;
-    font-size: 20px;
-}
-
-.about {
-    font-weight: bolder;
-    font-size: 25px;
-}
-
-p {
-    padding: 3px;
-}
-
-.headerText{
-    font-weight: 600;
-    font-size: 20px;
-    margin-left: 40px;
-}
-
-.insideText {
-    padding-top: 20px;
-    padding-left: 70px;
-    font-size: 17px;
+.title a {
     text-decoration: none;
 }
 
-.newHr {
-    width: 770px;
+.titleText {
+    grid-area: titleText;
+    justify-self: start;
+    margin-top: 60px;
 }
 
-/* ##################################################################### */
-/* #                            MOBILE                                 # */
+.titleText h1 {
+    font-size: 90px;
+    color: #05232C;
+    font-family: 'Times New Roman';
+}
+
+.titleText h4 {
+    font-size: 35px;
+    color: #01090A;
+    font-family: 'Times New Roman';
+}
+
+
+/* logo */
+
+.titleLogo {
+    /* margin-top: 10px; */
+    grid-area: titleLogo;
+    justify-self: end;
+    width: 250px;
+}
+
+.topnav {
+    display: none;
+}
+
+
+/* ############## CODE FOR THE MENU ################ */
+
+.menu {
+    grid-area: box2;
+    list-style-type: none;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: #16A4CC;
+    height: 100px;
+    opacity: 0.9;
+    display: grid;
+    grid-auto-rows: 100px;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-areas: ". sub1 . sub2 . sub3 . sub4 . sub5 . sub6 . sub7 .";
+}
+
+.sub1 {
+    grid-area: sub1;
+    justify-self: center;
+}
+
+.about {
+    background-color: #16A4CC;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    /* opacity: 1; */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.sub1:hover .dropdown-content {
+    display: block;
+}
+
+.sub1:hover .about {
+    color: #00232B;
+}
+
+.sub2 {
+    grid-area: sub2;
+    justify-self: center;
+}
+
+.mio {
+    background-color: #16A4CC;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.sub2:hover .dropdown-content {
+    display: block;
+}
+
+.sub2:hover .mio {
+    color: #00232B;
+}
+
+.sub3 {
+    grid-area: sub3;
+    justify-self: center;
+}
+
+.apply {
+    background-color: #16A4CC;
+    color: black;
+    font-size: 16px;
+    border: none;
+}
+
+.apply a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sub3:hover .apply a {
+    color: #00232B;
+}
+
+.sub4 {
+    grid-area: sub4;
+    justify-self: center;
+}
+
+.message {
+    background-color: #16A4CC;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.message a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sub4:hover .message a {
+    color: #00232B;
+    cursor: pointer;
+}
+
+.sub5 {
+    grid-area: sub5;
+    justify-self: center;
+}
+
+.guide {
+    background-color: #16A4CC;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.sub5:hover .dropdown-content {
+    display: block;
+}
+
+.sub5:hover .guide {
+    color: #00232B;
+}
+
+.sub6 {
+    grid-area: sub6;
+    justify-self: center;
+}
+
+.contact {
+    background-color: #16A4CC;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.contact a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sub6:hover .contact a {
+    color: #00232B;
+}
+
+.sub7 {
+    grid-area: sub7;
+    justify-self: center;
+}
+
+.news {
+    background-color: #16A4CC;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.news a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sub7:hover .news a {
+    color: #00232B;
+}
+
+
+/* #########  APPLY SECTION  ########## */
+
+.apply_section {
+    grid-area: box3;
+    height: 450px;
+    background-image: url("pics/front_page/Europe-flags.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: "." "button" ".";
+}
+
+.apply_button_in_section {
+    grid-area: button;
+    height: fit-content;
+    height: -moz-fit-content;
+    /* mozilla */
+    width: fit-content;
+    width: -moz-fit-content;
+    /* mozilla */
+    font-size: 45px;
+    padding: 15px 30px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.788);
+    color: #00232B;
+    font-family: sans-serif;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.apply_button_in_section:hover {
+    background-color: white;
+    font-size: 48px;
+    transition: ease;
+    transition-duration: 0.2s;
+}
+
+
+/* #############  NEWS SECTION  ############## */
+
+.news-section {
+    background-color: #ffffff;
+    grid-area: box4;
+    /* margin-top: 40px; */
+    margin: 40px auto;
+    display: grid;
+    width: 1200px;
+    justify-self: center;
+    grid-template-rows: 20px auto 100px 20px 100px 20px 100px 20px;
+    grid-template-columns: 30px auto 30px;
+    grid-template-areas: ". . ." ". news-header ." ". new1 ." ". . ." ". new2 ." ". . ." ". new3 ." ". . .";
+}
+
+
+/* News text settings */
+
+.news-section h1 {
+    grid-area: news-header;
+    justify-self: center;
+    margin-bottom: 20px;
+    color: #00232B;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.news-section h2 {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.news-section p {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+/* Grid look of the latest 3 news */
+
+.news1 {
+    grid-area: new1;
+    position: center;
+    background-color: #16A3CC;
+    width: 97%;
+}
+
+.news1:hover {
+    width: 101%;
+    transition: ease;
+    transition-duration: 0.2s;
+}
+
+.news2 {
+    grid-area: new2;
+    background-color: #16A3CC;
+    width: 97%;
+}
+
+.news2:hover {
+    width: 101%;
+    transition: ease;
+    transition-duration: 0.2s;
+}
+
+.news3 {
+    grid-area: new3;
+    background-color: #16A3CC;
+    width: 97%;
+}
+
+.news3:hover {
+    width: 101%;
+    transition: ease;
+    transition-duration: 0.2s;
+}
+
+
+/* ##########  FOOTER  ######### */
+
+
+/* .footer {
+	margin-top: 50px;
+	margin-bottom: 0px;
+	grid-area: box5;
+	background-color: black;
+	height: 200px;
+} */
+
+
 /* ##################################################################### */
 
-@media screen and (max-width: 824px){
 
-    body{
-        display: grid;
-        justify-content: center;
+/* #                              MOBILE                               # */
+
+
+/* ##################################################################### */
+
+@media only screen and (max-width: 824px) {
+    /* #########  TITLE MOBILE  ######## */
+    .title {
+        /* grid-area: title; */
+        height: 140px;
+        position: relative;
     }
-    .content {
-        margin-left: 0;
-        margin-top: 20px;
-        height: fit-content;
-        width: 370px;
-        margin-bottom: 20px;
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 370px;
-        grid-template-rows: auto 10px auto ;
+    .titleLogo {
+        margin-top: 40px;
+        margin-left: 5px;
+        width: 90px;
+        justify-self: end;
     }
-    .newHr {
-        width: 350px;
+    .titleText {
+        margin-top: 60px;
+        margin-right: 5px;
+        justify-self: start1;
     }
-    .headerText {
+    .titleText h1 {
+        font-size: 30px;
+    }
+    .titleText h4 {
+        font-size: 14px;
+    }
+    /* #########  TOPNAV MOBILE  ######## */
+    .topnav {
+        display: block;
+    }
+    .topnav #mobile {
+        display: none;
+    }
+    .topnav #mobile a {
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
         font-size: 17px;
-        margin-left: 0;
+        display: block;
+        /* position: relative; */
     }
-    .insideText {
-        padding-left: 10px;
-        font-size: 15px;
+    /* Style the hamburger menu */
+    .icon {
+        padding: 14px 16px;
+        color: white;
+        background: #338dd5;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
-    h1, h2, p a {
-        font-size: 15px;
+    .menu {
+        display: none;
     }
-    .about {
-        font-size: 22px;
+    .topnav {
+        justify-content: left;
     }
-    .photo {
-        margin-left: 0;
-        width: 370px;
+    .topnav #mobile {
+        grid-area: box2;
+        position: relative;
+        background-color: #7fb3dd;
+        justify-content: center;
+        grid-template-rows: 5px;
+        grid-template-columns: 300px;
+        grid-template-areas: "." "sub1" "sub2" "sub3" "sub4" "sub5" "sub6" "sub7" ".";
     }
-}
-
-@media screen and (max-width: 320px){
-    .content {
-        width: 320px;
-        grid-template-columns: 320px;
+    #mobile {
+        justify-items: left;
     }
-
-    hr, .newHr {
-        margin-left: 0;
-        width: 320px;
+    .sub1,
+    .sub2,
+    .sub3,
+    .sub4,
+    .sub5,
+    .sub6,
+    .sub7 {
+        justify-self: left;
+        justify-content: start;
     }
-    .photo {
-        width: 320px;
+    /* #########  APPLY SECTION MOBILE  ######## */
+    .apply_section {
+        height: 400px;
     }
-}
-@media screen and (max-width: 280px){
-    .content {
-        width: 280px;
-        grid-template-columns: 280px;
-    }
-
-    hr, .newHr {
-        margin-left: 0;
-        width: 280px;
-    }
-    .photo {
-        width: 280px;
+    /* ############  NEWS MOBILE  ########## */
+    .news-section {
+        /* grid-area: box4; */
+        grid-template-columns: 10px auto 10px;
+        width: 95%;
     }
 }
